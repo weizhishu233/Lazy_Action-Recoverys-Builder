@@ -51,7 +51,7 @@ on:
         type: boolean
       LDCHECKPATH:
         description: 'Path of blobs to check' # Use it know what kind of dependencies your missing for decryption blobs.
-        required: true
+        required: false
         default: 'system/bin/qseecomd'
 
 jobs:
