@@ -53,6 +53,9 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
+      USER_PASS: ${{ secrets.USER_PASS }}
+      
     permissions:
       contents: write
     steps:
@@ -201,9 +204,3 @@ jobs:
       run: |
           curl -sL https://gist.githubusercontent.com/qwqlemon2333/1c9a4e04cf7fd3bd5b95a2e56b682d08/raw/5ba0fdf624ecf64f337ffead7b9f7d1cd5614140/debug-github-actions.sh | bash
           sleep 2h
-      env:
-          # After sign up on the https://ngrok.com/
-          # You can find this token here: https://dashboard.ngrok.com/get-started/setup
-          NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
-          # This password you will use when authorizing via SSH
-          USER_PASS: ${{ secrets.USER_PASS }}
