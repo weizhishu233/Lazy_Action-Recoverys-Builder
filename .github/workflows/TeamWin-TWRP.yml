@@ -71,7 +71,7 @@ jobs:
         echo "Build Target: ${{ inputs.BUILD_TARGET }}image"
 
     - name: Cleanup
-      uses: rokibhasansagar/slimhub_actions@62FBB90
+      uses: rokibhasansagar/slimhub_actions@62fbb9016e83e309fbd9293910b41e627ee872a6
       
     - name: Set Swap Space
       uses: pierotofy/set-swap-space@master
