@@ -84,7 +84,7 @@ jobs:
             echo "MANIFEST=https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git" >> $GITHUB_ENV
             echo "CHECK_LEGACY_BRANCH=false" >> $GITHUB_ENV
         else
-            echo "MANIFEST=https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git" >> $GITHUB_ENV
+            echo "MANIFEST=https://github.com/weizhishu233/platform_manifest_twrp_omni.git" >> $GITHUB_ENV
             echo "CHECK_LEGACY_BRANCH=true" >> $GITHUB_ENV
         fi
 
@@ -111,8 +111,8 @@ jobs:
       run: |
         mkdir android-recovery
         cd android-recovery
-        git config --global user.name "lazycodebuilder"
-        git config --global user.email "154446636+lazycodebuilder@users.noreply.github.com"
+        git config --global user.name "weizhishu233"
+        git config --global user.email "weizhishu233@users.noreply.github.com"
         repo init --depth=1 -u ${{ env.MANIFEST }} -b ${{ inputs.MANIFEST_BRANCH }}
 
     - name: Repo Sync
